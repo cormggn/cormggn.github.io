@@ -9,34 +9,41 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
         <div class="container-fluid">
-            <a class="navbar-brand active" aria-current="page" href="#">Home</a>
+            <a class="navbar-brand me-5 active" aria-current="page" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1</a>
+                        <a class="nav-link" href="#">Formations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 2</a>
+                        <a class="nav-link" href="#">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 4</a>
+                        <a class="nav-link" href="#">Projets</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section>
-        <h1 class="ps-4 py-4">Creating the frame of my site</h1>
-    </section>
+    
+    <div class="d-flex flex-column">
+        <div>
+            <h1 class="ps-5 py-4">Formations</h1>
+        </div>
+        <hr class="mx-auto w-75">
+        <div>
+            <h1 class="ps-5 py-4">Compétences</h1>
+        </div>
+        <hr class="mx-auto w-75">
+        <div class="d-flex flex-row">
+            <h1 class="ps-5 py-4">Projets</h1>
+        </div>
+    </div>
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -44,19 +51,16 @@
                 <a class="nav-link px-2 text-muted" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="#">Link 1</a>
+                <a class="nav-link px-2 text-muted" href="#">Formations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="#">Link 2</a>
+                <a class="nav-link px-2 text-muted" href="#">Compétences</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="#">Link 3</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="#">Link 4</a>
+                <a class="nav-link px-2 text-muted" href="#">Projets</a>
             </li>
         </ul>
-        <p class="text-center text-muted">Cormac GOGAN, 2022</p>
+        <a href="cormggn.github.io" class="nav-link text-center text-muted">cormggn.github.io</a>
     </footer>
 
     <script src="script/main.js"></script>
