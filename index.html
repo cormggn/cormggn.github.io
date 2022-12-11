@@ -26,8 +26,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#compétences">Compétences</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projets">Projets</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projets
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="clothes.html">Full.Stop - The Clothing Shop</a></li>
+                          <li><a class="dropdown-item" href="games.html">P2W - GameStore</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -39,20 +45,7 @@
             <div class="row text-center">
                 <h1>Cormac Gogan</h1>
             </div>
-            <div class="row py-4">
-                <div class="col-sm-7">
-                    <p class="fs-5 mb-0"><img class="me-3" width="5%" src="./images/phone.png">07 69 31 61 94</p>
-                    <p class="fs-5 mb-0"><img class="me-3" width="5%" src="./images/email.png">cormac.gogan@etu.univ-smb.fr</p>
-                    <p class="fs-5 mb-0"><img class="me-3" width="5%" src="./images/calender.png">3 octobre 2000 à Bruxelles, Belgique</p>
-                    <p class="fs-5 mb-0"><img class="me-3" width="5%" src="./images/nationality.png">Irlandais</p>
-                </div>
-                <div class="col-sm-5 d-flex flex-column text-end">
-                    <p class="fs-5 mb-0">73a Résidence Jean Monnet</p>
-                    <p class="fs-5 mb-0">2 Rue Jacqueline Auriol</p>
-                    <p class="fs-5 mb-0">Annecy-le-Vieux</p>
-                    <p class="fs-5 mb-0">74940 ANNECY</p>
-                </div>
-            </div>
+
         </div>
 
         <hr class="mx-auto w-75">
@@ -155,10 +148,26 @@
         </div>
 
         <hr class="mx-auto w-75">
-        <div class="container-fluid">
-            <div class="container-fluid">
-                <div class="row text-center mb-4">
-                    <h1 id="projets">Projets</h1>
+        <div class="container-fluid d">
+            <div class="row text-center mb-4">
+                <h1 id="projets">Projets</h1>
+            </div>
+            <div class="d-flex">
+                <div class="card m-auto" style="width: 18rem;">
+                    <img src="./images/clothes-home.PNG" class="card-img-top" alt="clothing shop">
+                    <div class="card-body">
+                    <h5 class="card-title">Full.Stop - The Clothing Shop</h5>
+                    <p class="card-text">Développement d'un site web en utilisant le framework Django, codé en Python</p>
+                    <a href="clothes.html" class="btn btn-primary">Voire plus</a>
+                    </div>
+                </div>
+                <div class="card m-auto" style="width: 18rem;">
+                    <img src="./images/games-home.PNG" class="card-img-top" alt="game shop">
+                    <div class="card-body">
+                    <h5 class="card-title">P2W GameStore</h5>
+                    <p class="card-text">Développement d'un site web en utilisant le framework Django, codé en Python</p>
+                    <a href="games.html" class="btn btn-primary">Voire plus</a>
+                    </div>
                 </div>
             </div>
         </div>
