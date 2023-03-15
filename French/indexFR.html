@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio FR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript">
+        window.html2canvas = html2canvas;
+        window.jsPDF = window.jspdf.jsPDF;
+
+        function makePDF(){
+            html2canvas(document.querySelector("#capture"),{
+
+                allowTaint: true,
+                useCORS: true,
+                scale: 1
+            }).then(canvas => {
+                var img = canvas.toDataURL("image/png");
+
+                var doc = new jsPDF();
+                doc.setFont('Arial');
+                doc.getFontSize(11);
+                doc.addImage(img,'PNG',7,13,195,105);
+                doc.save('htmltopdf.pdf');
+            });
+      
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5 active" aria-current="page" href="#">Accueil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work_experiences">Expériences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#misc">Centres d'Intérêts</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projets
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="clothes.html">Full.Stop - The Clothing Shop</a></li>
+                          <li><a class="dropdown-item" href="games.html">P2W - GameStore</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column w-75 mx-auto" id="capture">
+        <div class="container-fluid py-5 w-75 mx-auto">
+            <div class="row text-center">
+                <h1>Cormac Gogan</h1>
+                <div class="py-2">
+                    <a class="fs-6 btn btn-dark" href="CVFR.pdf" target="_blank">Download PDF</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6" id="personal_data">
+                    <p class="fs-6 m-0"><img class="me-2" width="5%" src="./images/calender.png">3 Oct 2000 in Brussels, Belgium</p>
+                    <p class="fs-6 m-0"><img class="me-2" width="5%" src="./images/nationality.png">Irish</p>
+                    <p class="fs-6 m-0"><img class="me-2" width="5%" src="./images/location.png">9 Rue de l'Arc en Ciel, 74940 ANNECY, France</p>
+                    <p class="fs-6 m-0"><img class="me-2" width="5%" src="./images/phone.png">+33 (0) X XX XX XX XX</p>
+                    <p class="fs-6 m-0"><img class="me-2" width="5%" src="./images/email.png">cormac.gogan@etu.univ-smb.fr</p>
+                    <div class ="d-flex">
+                        <a class="fs-6 m-0 text-decoration-none text-dark" href="https://www.linkedin.com/in/cormac-gogan-b6a295257/"><img class="me-2" width="15%" src="./images/linkedin.png">Cormac Gogan</a>
+                        <a class="fs-6 m-0 text-decoration-none text-dark" href="https://github.com/cormggn"><img class="me-2" width="20%" src="./images/github.png">cormggn</a>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 align-middle" id="job_objective">
+                    <p class="fs-6 text-center my-4">Erasmus student majoring in Computing with a minor in French at the Technological University Dublin in Ireland. With a fondness and background in Art & Design, I am looking to apply my Visual Communcation skills to front-end development.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mx-auto w-75">
+
+        <div class="container-fluid py-4">
+            <div class="row text-center mb-4">
+                <h1 id="work_experiences">Work Experiences</h1>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-0 text-end">JUNE 2022 - AUG 2022</p>
+                <p class="col-sm-6 fs-5 mb-0"><strong>Barman & Waiter</strong> at De Valera's - Brussels, Belgium</p>
+                <p class="col-sm-5 m-0 text-end"></p>
+                <p class="col-sm-6 fs-6 mb-0 text-wrap">Team work in a Gastropub : customer service, managing orders, managing cash register, restocking & cleaning</p>
+
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-0 text-end">OCT 2021 - JAN 2022</p>
+                <p class="col-sm-6 fs-5 mb-0"><strong>Barback & Waiter</strong> at Cassidys - Dublin, Ireland</p>
+                <p class="col-sm-5 m-0 text-end"></p>
+                <p class="col-sm-6 fs-6 mb-0 text-wrap">Team work in an Irish Pub : customer service, managing orders, restocking & cleaning</p>
+            </div>
+        </div>
+
+        <hr class="mx-auto w-75">
+
+        <div class="container-fluid py-4 w-75">
+            <div class="row text-center mb-4">
+                <h1 id="skills">Skills</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mb-3 text-center">
+                    <h2>Technical Skills</h2>
+                    <div class="text-start">
+                        <p class="col-sm-8 fs-5 p-0 mb-0"><strong>Web Development</strong></p>
+                        <p class="fs-6 mb-0 ms-2">Front-end (Html, css, js, Bootstrap)</p>
+                        <p class="fs-6 mb-0 ms-2">Back-end (Django in Python, Laravel in Php)</p>
+
+                        <p class="fs-5 p-0 mt-1 mb-0"><strong>Conception & management of a projet</strong></p>
+
+                        <p class="fs-6 mb-0 ms-2">UML & Specifications</p>
+
+                        <p class="fs-6 mb-0 ms-2">Azure DevOps & Github</p>
+        
+                        <p class="fs-5 p-0 mt-1 mb-0"><strong>Frequent use and mastery of softwares</strong></p>
+                        <p class="fs-6 mb-0 ms-2">Office (Word, Excel, Powerpoint)</p>
+                        <p class="fs-6 mb-0 ms-2">Adobe (Photoshop, Illustrator, Premiere, After Effects)</p>
+
+                        <p class="fs-5 p-0 mt-1 mb-0"><strong>Conception & realisation of video games in Unity (C#)</strong></p>
+
+                        <p class="fs-5 p-0 mt-1 mb-0"><strong>Creation & maintenance of a database (PostgreSQL, Oracle)</strong></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 text-center">
+                    <h2>Personal Skills</h2>
+                    <div class="text-start ps-5">
+                        <p class="col-sm-8 fs-5 p-0 mb-0">Task-orientated & focused</p>
+                        <p class="col-sm-8 fs-5 p-0 mb-0">Adaptable & self-sufficient</p>
+                        <p class="col-sm-8 fs-5 p-0 mb-0">Innovative, dynamic & confident</p>
+                    </div>
+                    <h2 class="mt-5">Languages</h2>
+                    <div class="text-start ps-5">
+                        <p class="col-sm-8 fs-5 p-0 mb-0"><strong>English </strong>(native, 1st language)</p>
+                        <p class="col-sm-8 fs-5 p-0 mb-0"><strong>French </strong>(native, 2nd language)</p>
+                        <p class="col-sm-8 fs-5 p-0 mb-0"><strong>Italian </strong>(A2)</p>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+
+        <hr class="mx-auto w-75">
+        
+        <div class="container-fluid py-4">
+            <div class="row text-center mb-4">
+                <h1 id="education">Education</h1>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-1 text-end">2022</p>
+                <p class="col-sm-6 fs-5 mb-1"><strong>3rd Year BSc Honours in Computing with Language </strong>(ongoing)</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/study.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">Software Development</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/location.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">Technological University Dublin - Dublin, Ireland</p>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-1 text-end">2022</p>
+                <p class="col-sm-6 fs-5 mb-1"><strong>BUT Informatique Year 2 Program </strong>(Erasmus - ongoing)</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/study.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">MSE Data Integration</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/location.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">Université Savoie Mont Blanc - Annecy, France</p>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-1 text-end">2019</p>
+                <p class="col-sm-6 fs-5 mb-1"><strong>Foundation course in Art & Design</strong></p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/study.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">Visual Communication</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/location.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">University of the Creative Arts - Canterbury, UK</p>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-5 fs-5 mb-1 text-end">2018</p>
+                <p class="col-sm-6 fs-5 mb-1"><strong>European Baccalaureate</strong></p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/study.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">English, French, Advanced maths, Biology & Art</p>
+                <p class="col-sm-5 m-0 text-end"><img width="5%" src="./images/location.png"></p>
+                <p class="col-sm-6 fs-5 mb-0">European School of Brussels 1 - Brussels, Belgium</p>
+            </div>
+        </div>
+
+        <hr class="mx-auto w-75">
+
+        <div class="container-fluid py-4 w-75">
+            <div class="row text-center mb-4">
+                <h1 id="misc">Hobbies & Interests</h1>
+                <div class="text-start mt-2">
+                    <p class="fs-5 mb-0"><strong>Rugby - </strong> Scrum half for Boitsfort Rugby club for 6 years.</p>
+                    <p class="fs-5 mb-0"><strong>Rock Climbing - </strong> Top rope & bouldering multiple times a week.</p>
+                    <p class="fs-5 mb-0"><strong>Snowboarding - </strong> Weekly outing to the Alps with the University.</p>
+                    <p class="fs-5 mb-0"><strong>Skateboarding - </strong> Always challenging myself to land new tricks.</p>
+                    <p class="fs-5 mb-0"><strong>Video Games - </strong> Avid fan of RPG games as well as competitive tactical shooters.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <hr class="mx-auto w-75">
+
+        <div class="container-fluid w-75 py-4">
+            <div class="row text-center mb-4">
+                <h1 id="work_experiences">References</h1>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-3 fs-5 mb-0"><strong>Katsiaryna Brett</strong></p>
+                <p class="col-sm-3 fs-5 mb-0">Manager - De Valera's</p>
+                <p class="col-sm-3 fs-5 mb-0">Brussels, Belgium</p>
+                <p class="col-sm-3 fs-5 mb-0">+44 (0) XXXX XXX XXX</p>
+            </div>
+            <div class="row mb-3">
+                <p class="col-sm-3 fs-5 mb-0"><strong>Dave Ryder</strong></p>
+                <p class="col-sm-3 fs-5 mb-0">Manager - Cassidys</p>
+                <p class="col-sm-3 fs-5 mb-0">Dublin, Ireland</p>
+                <p class="col-sm-3 fs-5 mb-0">+353 (0) XX XXX XXXX</p>
+            </div>
+        </div>
+
+        <hr class="mx-auto w-75">
+
+        <div class="container-fluid py-4 d">
+            <div class="row text-center mb-4">
+                <h1 id="projets">Projects</h1>
+            </div>
+            <div class="d-flex">
+                <div class="card m-auto" style="width: 18rem; min-height: 25rem;">
+                    <img src="./images/clothes-home.PNG" class="card-img-top" alt="clothing shop">
+                    <div class="card-body">
+                    <h5 class="card-title" style="min-height: 3rem;">Full.Stop - The Clothing Shop</h5>
+                    <p class="card-text">Development of a website using the framework Django, coded in Python</p>
+                    <a href="clothes.html" class="btn btn-dark">See more</a>
+                    </div>
+                </div>
+                <div class="card m-auto" style="width: 18rem; min-height: 25rem;">
+                    <img src="./images/games-home.PNG" class="card-img-top" alt="game shop">
+                    <div class="card-body">
+                    <h5 class="card-title" style="min-height: 3rem;">P2W GameStore</h5>
+                    <p class="card-text">Development of a website using the framework Django, coded in Python</p>
+                    <a href="games.html" class="btn btn-dark">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#top">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#work_experiences">Work experiences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#misc">Hobbies & interests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="#projects">Projects</a>
+            </li>
+        </ul>
+        <a href="cormggn.github.io" class="nav-link text-center text-muted">cormggn.github.io</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
